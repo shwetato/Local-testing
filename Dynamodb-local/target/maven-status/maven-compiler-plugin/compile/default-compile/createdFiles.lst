@@ -1,0 +1,5 @@
+com/test/dynamodb/Service.class
+com/test/dynamodb/Response.class
+com/test/dynamodb/Request.class
+com/test/dynamodb/LambdaHandler.class
+com/test/dynamodb/BasicUserInfo.class

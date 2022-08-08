@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Simple CRUD webservice. State is stored in a SimpleTable (DynamoDB) resource.
+Globals:
+  Function:
+    Timeout: 20
+
+Resources:
+  Function:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: DevProblems
+      CodeUri:
+      Handler: com.test.dynamodb.LambdaHandler::handleRequest
+      Runtime: java8
+      Events:
+        GatewayApi:
+          Type: Api
+          Properties:
+            Path: /basicuserinfo
+            Method: post
+
